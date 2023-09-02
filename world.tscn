@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c43ipgtxg7w3m"]
+
+[ext_resource type="PackedScene" uid="uid://c232a40vlq5m7" path="res://cube.blend" id="1_jgbb0"]
+[ext_resource type="Script" path="res://Character.gd" id="2_foggx"]
+[ext_resource type="PackedScene" uid="uid://b1tfmrwv0gfvl" path="res://playermesh.tscn" id="3_tkjh3"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="LookTarget" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.86185, 1.2152, 2.48784)
+
+[node name="cube" parent="LookTarget" instance=ExtResource("1_jgbb0")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.771125, 0, 0.636684, 0, 1, 0, -0.636684, 0, 0.771125, 2.34181, 1.39753, 3.78611)
+current = true
+
+[node name="Character" type="Node3D" parent="."]
+script = ExtResource("2_foggx")
+
+[node name="playermesh" parent="Character" instance=ExtResource("3_tkjh3")]
