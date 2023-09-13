@@ -1,8 +1,8 @@
 extends Node3D
 
 @onready var look_at_target = get_parent().get_node("LookTarget")
-@onready var player_skeleton = $playermesh/playerrig/Skeleton3D
-@onready var upper_body = player_skeleton.find_bone("spine.003")
+@onready var player_skeleton = $"char2graphics/basehuman_control_rig-noimp_deform/Skeleton3D"
+@onready var upper_body = player_skeleton.find_bone("DEF-spine.002")
 
 
 func _process(delta):
@@ -21,4 +21,3 @@ func _process(delta):
 	# Be careful about which axis is set to 1.
 	var quat = Quaternion(Vector3(0, 0, 1), angle1)
 	player_skeleton.set_bone_pose_rotation(upper_body, quat)
-
