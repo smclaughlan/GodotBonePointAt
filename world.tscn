@@ -29,6 +29,12 @@ script = ExtResource("2_foggx")
 
 [node name="playermesh" parent="Character5" instance=ExtResource("3_tkjh3")]
 
+[node name="Character7" type="Node3D" parent="."]
+transform = Transform3D(-0.7694, 0, 0.638768, 0, 1, 0, -0.638768, 0, -0.7694, -1.86378, 0, 3.38608)
+script = ExtResource("2_foggx")
+
+[node name="playermesh" parent="Character7" instance=ExtResource("3_tkjh3")]
+
 [node name="Character3" type="Node3D" parent="."]
 transform = Transform3D(0.584575, 0, -0.811339, 0, 1, 0, 0.811339, 0, 0.584575, -2.47562, 0, 0)
 script = ExtResource("2_foggx")
@@ -40,6 +46,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, 0)
 script = ExtResource("4_04rso")
 
 [node name="char2graphics" parent="Character2" instance=ExtResource("5_3cluy")]
+
+[node name="Character6" type="Node3D" parent="."]
+transform = Transform3D(0.0724375, 0, 0.997373, 0, 1, 0, -0.997373, 0, 0.0724375, -1.77713, 0, 2.15481)
+script = ExtResource("4_04rso")
+
+[node name="char2graphics" parent="Character6" instance=ExtResource("5_3cluy")]
 
 [node name="Character4" type="Node3D" parent="."]
 transform = Transform3D(-0.0143985, 0, 0.999896, 0, 1, 0, -0.999896, 0, -0.0143985, 3.05225, 0, 0)
