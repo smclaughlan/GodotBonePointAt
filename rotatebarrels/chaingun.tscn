@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2jstw0o3mybu"]
+
+[ext_resource type="PackedScene" uid="uid://l2g35o3k1l72" path="res://rotatebarrels/graphics/chaingun.blend" id="1_jcqa8"]
+[ext_resource type="Script" path="res://rotatebarrels/chaingun.gd" id="1_nhck3"]
+
+[node name="Chaingun" type="Node3D"]
+script = ExtResource("1_nhck3")
+
+[node name="Graphics" type="Node3D" parent="."]
+
+[node name="chaingun" parent="Graphics" instance=ExtResource("1_jcqa8")]
+
+[node name="BarrelsInner" parent="Graphics/chaingun/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, -1.98419e-09, 0, 1.98419e-09, 1, 0, 0, 0, 1, -1.48376e-08, 0.692504, 1.30946)
+visible = false
+
+[node name="BarrelsOuter" parent="Graphics/chaingun/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, -1.98419e-09, 0, 1.98419e-09, 1, 0, 0, 0, 1, -1.48376e-08, 0.692504, 1.30946)
+visible = false
+
+[node name="Base" parent="Graphics/chaingun/Armature/Skeleton3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692504, 1.30946)
+
+[node name="Grip" parent="Graphics/chaingun/Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692504, 1.30946)
+
+[node name="chaingunbarrels" parent="Graphics" instance=ExtResource("1_jcqa8")]
+
+[node name="BarrelsInner" parent="Graphics/chaingunbarrels/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, -1.98419e-09, 0, 1.98419e-09, 1, 0, 0, 0, 1, -1.48376e-08, 0.692504, 1.30946)
+
+[node name="BarrelsOuter" parent="Graphics/chaingunbarrels/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, -1.98419e-09, 0, 1.98419e-09, 1, 0, 0, 0, 1, -1.48376e-08, 0.692504, 1.30946)
+
+[node name="Base" parent="Graphics/chaingunbarrels/Armature/Skeleton3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692504, 1.30946)
+visible = false
+
+[node name="Grip" parent="Graphics/chaingunbarrels/Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692504, 1.30946)
+visible = false
+
+[editable path="Graphics/chaingun"]
+[editable path="Graphics/chaingunbarrels"]
